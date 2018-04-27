@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:baselineAligned="false"
+              android:orientation="horizontal"
+              android:paddingBottom="8dp"
+              app:showDivider="false">
+
+    <LinearLayout
+        android:id="@+id/viewToday"
+        style="@style/AccountItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:id="@+id/tvToday"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"/>
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/today_story"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewAll"
+        style="@style/AccountItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:id="@+id/tvAll"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"/>
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/all_story"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewCircle"
+        style="@style/AccountItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:id="@+id/tvCircle"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"/>
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/story_circle"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewFriend"
+        style="@style/AccountItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:id="@+id/tvFriend"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"/>
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/my_friends"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

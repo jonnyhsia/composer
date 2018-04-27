@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="224dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgStory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/border_image"
+        android:contentDescription="@string/description_story_cover"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="w,9:16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="#EEEEEE" />
+
+    <com.jonnyhsia.uilib.widget.NotoTextView
+        android:id="@+id/tvStoryContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="1dp"
+        android:maxLines="3"
+        android:minHeight="66dp"
+        android:textColor="@color/textPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgStory"
+        tools:text="操场西北边能望到的那个丑陋建筑"
+        tools:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/img_avatar_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStoryContent" />
+
+    <com.jonnyhsia.uilib.widget.NotoTextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:letterSpacing="0.02"
+        android:text="高能的土豆"
+        android:textColor="@color/textSecondary"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvReadTime"
+        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+
+    <com.jonnyhsia.uilib.widget.NotoTextView
+        android:id="@id/tvReadTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:letterSpacing="0.02"
+        android:text="大约 10 分钟阅读"
+        android:textColor="@color/textCaption"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@mipmap/ic_more_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgAvatar" />
+
+    <ImageView
+        android:id="@+id/imgCollect"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@mipmap/ic_collect"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+        app:layout_constraintEnd_toStartOf="@id/imgMore"
+        app:layout_constraintTop_toTopOf="@+id/imgAvatar" />
+
+</android.support.constraint.ConstraintLayout>

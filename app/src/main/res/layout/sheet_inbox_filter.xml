@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewHandle"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_sheet_handle"
+        android:clickable="true"
+        android:focusable="true"
+        android:stateListAnimator="@animator/anim_sheet_handle"/>
+
+    <com.jonnyhsia.labelview.LabelView
+        style="@style/FilterLabel"
+        android:id="@+id/labelEnableStoryPush"
+        app:caption="你可能感兴趣的故事集的推荐通知"
+        app:label="精彩故事推荐"/>
+
+    <com.jonnyhsia.labelview.LabelView
+        style="@style/FilterLabel"
+        android:id="@+id/labelCollapseNotification"
+        app:caption="将近期的互动消息统一归纳"
+        app:label="折叠互动消息通知"/>
+
+    <com.jonnyhsia.labelview.LabelView
+        style="@style/FilterLabel"
+        android:id="@+id/labelCollapseComment"
+        app:caption="将近期的评论统一归纳"
+        app:label="折叠评论通知"/>
+
+    <com.jonnyhsia.labelview.LabelView
+        style="@style/FilterLabel"
+        android:id="@+id/labelDisablePush"
+        android:layout_marginBottom="12dp"
+        app:caption="将不能够获取或接收到通知"
+        app:label="关闭所有通知"/>
+
+</LinearLayout>

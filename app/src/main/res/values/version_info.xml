@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="version_date">9月17日</string>
+
+    <string-array name="change_log">
+        <item>全新的发现与订阅，浏览公开故事更加便捷。</item>
+        <item>搜索个人时间线故事，寻找过去的回忆。</item>
+        <item>时间线故事支持手势滑动进行删除。</item>
+        <item>改善 Night Mode 配色。</item>
+        <item>新的关于界面。</item>
+        <item>In-App Updates.</item>
+        <item>实现简易故事字数统计。</item>
+        <item>性能改善与错误问题修复。</item>
+    </string-array>
+
+    <!-- Name # Group # Url # Intro -->
+    <string-array name="third_party_libs">
+        <item>Android Support Libraries#AOSP#https://developer.android.com/topic/libraries/support-library/index.html#The Android Support Library offers backward-compatible versions of a number of features that are not built into the framework.</item>
+        <item>Android Architecture Components#AOSP#https://developer.android.com/topic/libraries/architecture/index.html#A new collection of libraries that help you design robust, testable, and maintainable apps.</item>
+        <item>Apollo#lsxiao#https://github.com/lsxiao/Apollo#🚀 Awesome EventBus by RxJava.</item>
+        <item>Glide#bumptech#https://github.com/bumptech/glide#Glide is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.</item>
+        <item>GlideTransformations#wasabeef#https://github.com/wasabeef/glide-transformations#An Android transformation library providing a variety of image transformations for Glide.</item>
+        <item>LabelView#JonnyHsia#https://github.com/jonnyhsia/LabelView#A convenient and powerful layout library to create label easily.</item>
+        <item>MaterialEditText#rengwuxian#https://github.com/rengwuxian/MaterialEditText#The EditText in Material Design, with more features that Google Material Design Spec has introduced.</item>
+        <item>MultiType#Drakeet#https://github.com/drakeet/MultiType#An Android library to create multiple item types list views easily and flexibly.</item>
+        <item>RecyclerViewSnap#rubensousa#https://github.com/rubensousa/RecyclerViewSnap#Gravity snap helper for recycler view.</item>
+        <item>Retrofit#Square#https://github.com/square/retrofit#Type-safe HTTP client for Android and Java by Square, Inc.</item>
+        <item>RxBinding#JakeWharton#https://github.com/JakeWharton/RxBinding#RxJava binding APIs for Android UI widgets from the platform and support libraries.</item>
+        <item>RxJava#ReactiveX#https://github.com/ReactiveX/RxJava#RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences.</item>
+    </string-array>
+
+</resources>

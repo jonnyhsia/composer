@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="?android:selectableItemBackground"
+             android:minHeight="@dimen/pref_size">
+
+    <com.jonnyhsia.uilib.widget.NotoTextView
+        android:id="@+id/tvKey"
+        style="@style/Pref.Key"
+        tools:text="文章字体大小"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        style="@style/Pref.Value"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:theme="@style/CustomCheckbox"/>
+
+</FrameLayout>

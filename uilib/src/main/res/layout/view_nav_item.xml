@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:background="?android:selectableItemBackgroundBorderless"
+             android:clickable="true"
+             android:focusable="true"
+             android:minHeight="?android:actionBarSize"
+             tools:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/ic_nav"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:tint="@color/iconTint"
+        tools:ignore="ContentDescription"/>
+
+</FrameLayout>

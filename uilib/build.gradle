@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        switch (requested.group){
+            case 'com.android.support':
+                details.useVersion '27.1.1'
+                break
+            case 'io.reactivex.rxjava2':
+                if (requested.name == 'rxjava')
+                    details.useVersion '2.1.7'
+                else if (requested.name == 'rxandroid')
+                    details.useVersion '2.0.1'
+                break
+            case 'com.android.support.constraint':
+                details.useVersion '1.1.0'
+                break
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':core')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:support-annotations:$rootProject.support_lib_version"
+    implementation "com.android.support:design:$rootProject.support_lib_version"
+    implementation "com.android.support:recyclerview-v7:$rootProject.support_lib_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_solver_version"
+    implementation 'me.everything:overscroll-decor-android:1.0.4'
+    // glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glide_version"
+    kapt "com.github.bumptech.glide:compiler:$rootProject.glide_version"
+}

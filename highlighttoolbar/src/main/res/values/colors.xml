@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="textPrimary">#de000000</color>
+    <color name="textSecondary">#8a000000</color>
+    <color name="textCaption">#61000000</color>
+    <color name="textDisable">#42000000</color>
+    <color name="textIgnorable">#29000000</color>
+
+</resources>

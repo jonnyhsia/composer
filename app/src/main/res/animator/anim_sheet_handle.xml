@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_drag_can_accept="true">
+        <objectAnimator
+            android:propertyName="scaleX"
+            android:valueFrom="1"
+            android:valueTo="0.2"/>
+    </item>
+
+    <item>
+        <objectAnimator
+            android:propertyName="scaleX"
+            android:valueFrom="0.2"
+            android:valueTo="1"/>
+    </item>
+</selector>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="aspect_ratio" format="float" />
+
+    <declare-styleable name="AspectRatioView">
+        <attr name="aspect_ratio" />
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="aspect_ratio" />
+    </declare-styleable>
+
+    <declare-styleable name="SpannedGridLayoutManager">
+        <attr name="android:orientation" />
+        <attr name="spanCount" />
+        <attr name="aspectRatio" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomNavigation">
+        <attr name="primaryEnable" format="boolean" />
+        <attr name="primaryIcon" format="reference" />
+        <attr name="primaryText" format="string|reference" />
+        <attr name="elevation" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckableImageView">
+        <attr name="ui_checked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="NeatToolbar">
+        <attr name="leftIcon" format="reference" />
+        <attr name="leftText" format="string|reference" />
+        <attr name="middleTitle" format="string|reference" />
+        <attr name="accentColor" format="color|reference" />
+        <attr name="pressedColor" format="color|reference" />
+        <attr name="disabledColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NotoTextView">
+        <attr name="stateColors" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="KeyValueView">
+        <attr name="sp_key" format="string|reference" />
+        <attr name="sp_value" format="string|reference" />
+        <attr name="sp_icon" format="reference" />
+        <attr name="sp_arrow" format="reference" />
+        <attr name="sp_enable" format="boolean" />
+        <attr name="sp_div" format="enum">
+            <enum name="none" value="0" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+            <enum name="both" value="6" />
+        </attr>
+        <attr name="sp_type" format="enum">
+            <enum name="text" value="0" />
+            <enum name="checkbox" value="1" />
+            <enum name="switchButton" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="NintendoSwitch">
+        <attr name="isChecked" format="boolean" />
+        <attr name="controlTintColor" format="color" />
+        <attr name="controlActiveTintColor" format="color" />
+        <attr name="trackTintColor" format="color" />
+        <attr name="trackActiveColor" format="color" />
+    </declare-styleable>
+
+</resources>

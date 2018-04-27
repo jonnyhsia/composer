@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="0dp">
+
+    <com.jonnyhsia.highlighttoolbar.HighlightToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:highlightSubTitle="2018年1月19日"
+        tools:highlightTitle="故事时间线"
+        app:dividerVisibility="HIDE"
+        tools:icon="@android:color/transparent"/>
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/selector_search_bar"
+        android:cursorVisible="false"
+        android:drawableStart="@mipmap/ic_search"
+        android:drawablePadding="8dp"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/noto_sans"
+        android:gravity="center_vertical"
+        android:hint="@string/search_bar"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.04"
+        android:longClickable="false"
+        android:minHeight="@dimen/searchBarHeight"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textAllCaps="true"
+        android:textColorHint="@color/textDisable"
+        android:textSize="14sp"
+        android:transitionName="@string/transition_search_bar"/>
+
+</FrameLayout>

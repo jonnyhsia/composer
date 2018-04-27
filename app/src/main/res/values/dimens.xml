@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="searchBarHeight">44dp</dimen>
+    <dimen name="touch_raise">5dp</dimen>
+    <dimen name="showcase_width">240dp</dimen>
+    <dimen name="status_height">25dp</dimen>
+    <dimen name="home_toolbar">79dp</dimen>
+    <dimen name="home_toolbar_expanded">216dp</dimen>
+</resources>

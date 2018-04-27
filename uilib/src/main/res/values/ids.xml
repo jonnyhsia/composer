@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="label" type="id"/>
+    <item name="sub_label" type="id"/>
+    <item name="label_icon_start" type="id"/>
+    <item name="label_icon_end" type="id"/>
+    <item name="label_indicator" type="id"/>
+    <item name="label_switch" type="id"/>
+</resources>

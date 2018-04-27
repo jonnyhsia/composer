@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dial_archives" type="id"/>
+    <item name="dial_publish" type="id"/>
+</resources>

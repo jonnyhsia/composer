@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 禁用时 -->
+    <item android:color="@color/textDisable" android:state_enabled="false"/>
+    <!-- 按下时 -->
+    <item android:color="@color/highlightCaption" android:state_pressed="true"/>
+    <!-- 通常时 -->
+    <item android:color="@color/highlight"/>
+
+</selector>

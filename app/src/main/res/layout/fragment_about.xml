@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".page.about.AboutFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@android:color/transparent"
+            android:paddingEnd="0dp"
+            android:paddingStart="-2dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:navigationIcon="@mipmap/ic_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title=" ">
+
+            <TextView
+                android:id="@+id/tvToolbarAppName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:alpha="0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_full_name"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.jonnyhsia.uilib.widget.ExtendsNestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/icApp"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="14dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher_legacy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvApp"
+                style="@style/Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="2"
+                android:text="@string/app_full_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icApp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCheckForUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/button_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/check_for_updates"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/icApp"
+                app:layout_constraintStart_toEndOf="@+id/icApp" />
+
+            <ImageView
+                android:id="@+id/imgEditor"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_editors_choice"
+                app:layout_constraintBottom_toBottomOf="@id/tvRatingNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvRating" />
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:includeFontPadding="false"
+                android:text="13+"
+                android:textColor="#858E98"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icApp" />
+
+            <com.jonnyhsia.uilib.widget.NotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Age"
+                android:textColor="#B0858E98"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAge" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="5.0"
+                android:textColor="#858E98"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ratingBar"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/imgEditor"
+                app:layout_constraintTop_toTopOf="@id/tvAge" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="4dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:isIndicator="false"
+                android:progressTint="#858E98"
+                android:rating="5"
+                app:layout_constraintBottom_toBottomOf="@id/tvRating"
+                app:layout_constraintEnd_toStartOf="@+id/tvAge"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvRating"
+                app:layout_constraintTop_toTopOf="@id/tvRating" />
+
+            <com.jonnyhsia.uilib.widget.NotoTextView
+                android:id="@+id/tvRatingNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,300 ratings"
+                android:textColor="#B0858E98"
+                app:layout_constraintStart_toStartOf="@id/tvRating"
+                app:layout_constraintTop_toBottomOf="@id/tvRating" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/blackX"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRatingNumber" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleShowcase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingEnd="6dp"
+                android:paddingStart="20dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                tools:layout_height="120dp"
+                tools:listitem="@layout/item_showcase" />
+
+            <TextView
+                android:id="@+id/tvChangeLogTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/change_log"
+                android:textColor="@color/textPrimary"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycleShowcase" />
+
+            <com.jonnyhsia.uilib.widget.NotoTextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.04"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChangeLogTitle"
+                tools:text="版本 0.15.3 Beta" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.04"
+                android:textAlignment="textEnd"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvChangeLogTitle"
+                tools:text="9月14日" />
+
+            <com.jonnyhsia.uilib.widget.NotoTextView
+                android:id="@+id/tvChangeLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/textPrimary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVersion"
+                tools:text="更新内容" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:divider="@drawable/divider_account_label"
+                android:dividerPadding="20dp"
+                android:orientation="vertical"
+                android:showDividers="beginning|middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChangeLog">
+
+                <com.jonnyhsia.uilib.widget.NotoTextView
+                    android:id="@+id/tvCredit"
+                    style="@style/AboutLabel"
+                    android:text="Made with ❤ &amp; third party libraries" />
+
+                <com.jonnyhsia.uilib.widget.NotoTextView
+                    android:id="@+id/tvContact"
+                    style="@style/AboutLabel"
+                    android:text="与开发者联系" />
+
+                <com.jonnyhsia.uilib.widget.NotoTextView
+                    android:id="@+id/tvDonate"
+                    style="@style/AboutLabel"
+                    android:text="资瓷开发者" />
+
+                <com.jonnyhsia.uilib.widget.NotoTextView
+                    style="@style/AboutLabel"
+                    android:clickable="false"
+                    android:text="第一次，谢谢大家"
+                    android:textColor="@color/textCaption" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.jonnyhsia.uilib.widget.ExtendsNestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

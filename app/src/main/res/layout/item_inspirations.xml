@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_section"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    tools:context=".page.main.home.multitype.AdvertisementsViewBinder">
+
+    <TextView
+        style="@style/TextHomeSection.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0"
+        android:text="#Inspirations" />
+
+
+    <com.jonnyhsia.uilib.widget.BounceRecyclerView
+        android:id="@+id/recycleInspirations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        tools:layout_height="236dp"
+        tools:listitem="@layout/item_inspiration" />
+
+</LinearLayout>

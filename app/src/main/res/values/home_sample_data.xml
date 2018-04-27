@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="home_topic_subculture_title">
+        <item>No Country for Old Men</item>
+        <item>やっぱり…</item>
+        <item>操场西北边能望到的那个丑陋的建筑</item>
+        <item>When life gives you lemons, make lemonade.</item>
+    </string-array>
+
+    <string-array name="home_topic_subculture_content">
+        <item>2005年到2006年初，因为飓风卡特里娜，我们前后共三次从路易斯安娜州</item>
+        <item>我之前，想得好多。想吃个饭，要是悠闲的话再散散步，路上和你讲我想告…</item>
+        <item>操场西北边那幢建筑，好丑，可是就是喜欢一次又一次地看见。时间不早了，下次又是什么时候。这样的事物竟</item>
+        <item>When life gives you lemons, make lemonade.</item>
+    </string-array>
+
+    <string-array name="home_topic_subculture_img">
+        <item>http://ou4f31a1x.bkt.clouddn.com/18-4-26/12723596.jpg</item>
+        <item>http://ou4f31a1x.bkt.clouddn.com/17-8-4/38058011.jpg</item>
+        <item>https://ooo.0o0.ooo/2017/07/01/59577e4884c01.jpg</item>
+        <item>http://ou4f31a1x.bkt.clouddn.com/18-1-20/31790037.jpg</item>
+    </string-array>
+
+    <string-array name="home_ad">
+        <item>新维工作室，诚邀志同道合的你#事实上现在very缺人，再不加入就要废社了(摊手#http://ou4f31a1x.bkt.clouddn.com/18-4-26/47608325.jpg#1B9D5E#新维工作室</item>
+        <item>兔狗家装，五一大放价好礼送不停#全场五折起，满1000减100！疯狂豪礼送不停！#http://ou4f31a1x.bkt.clouddn.com/18-4-26/70240921.jpg#5614AB#兔狗科技</item>
+    </string-array>
+
+    <string-array name="home_suggest_topic">
+        <item>日常#http://ou4f31a1x.bkt.clouddn.com/18-4-26/48735849.jpg</item>
+        <item>插花藝術#http://ou4f31a1x.bkt.clouddn.com/18-4-26/29708803.jpg</item>
+        <item>寶可夢#http://ou4f31a1x.bkt.clouddn.com/18-4-26/72216216.jpg</item>
+        <item>UED#http://ou4f31a1x.bkt.clouddn.com/18-4-27/29309047.jpg</item>
+        <item>憂鬱#http://ou4f31a1x.bkt.clouddn.com/18-4-26/83586281.jpg</item>
+        <item>悠閒#http://ou4f31a1x.bkt.clouddn.com/18-4-26/54643767.jpg</item>
+        <item>塞爾達#http://ou4f31a1x.bkt.clouddn.com/18-4-26/14857079.jpg</item>
+    </string-array>
+
+</resources>

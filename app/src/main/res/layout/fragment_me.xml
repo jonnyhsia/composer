@@ -1,0 +1,86 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:paddingTop="@dimen/status_height"
+    android:scrollbars="none"
+    tools:background="@color/white"
+    tools:context=".page.main.me.MeFragment">
+
+    <com.jonnyhsia.labelview.LabelGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelDivider="@drawable/divider_account_label"
+        app:showLabelDividers="middle|end">
+
+        <include layout="@layout/layout_account" />
+
+        <include layout="@layout/layout_account_items" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelInbox"
+            style="@style/AccountLabel.Normal"
+            app:label="消息通知"
+            app:subLabel="8" />
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            style="@style/AccountSection"
+            android:text="@string/settings_general" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelNightMode"
+            style="@style/AccountLabel.Switch"
+            app:label="@string/night_mode" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelTheme"
+            style="@style/AccountLabel.Normal"
+            app:label="@string/change_theme"
+            app:subLabel="Lemonade" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelTextSize"
+            style="@style/AccountLabel.Normal"
+            app:label="@string/pref_text_size"
+            app:subLabel="普通" />
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            style="@style/AccountSection"
+            android:text="@string/settings_security" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelChangedPassword"
+            style="@style/AccountLabel.Normal"
+            app:label="修改密码" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelSecurity"
+            style="@style/AccountLabel.Switch"
+            app:label="隐私模式" />
+
+        <com.jonnyhsia.uilib.widget.NotoTextView
+            style="@style/AccountSection"
+            android:text="@string/settings_help" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelFeedback"
+            style="@style/AccountLabel.Normal"
+            app:label="建议与反馈" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelAbout"
+            style="@style/AccountLabel.Normal"
+            app:label="关于" />
+
+        <ViewStub
+            android:id="@+id/stubDebug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_debug" />
+
+    </com.jonnyhsia.labelview.LabelGroup>
+
+</ScrollView>

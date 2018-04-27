@@ -1,0 +1,50 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jonnyhsia.composer.page.main.search.SearchEmptyFragment">
+
+    <ImageView
+        android:id="@+id/imgSearchEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/ic_search_empty"
+        app:layout_constraintBottom_toTopOf="@+id/tvHintTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <com.jonnyhsia.uilib.widget.NotoTextView
+        android:id="@+id/tvHintTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:letterSpacing="0.05"
+        android:text="关键词 · 故事时间"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/tvHintCaption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgSearchEmpty"/>
+
+    <com.jonnyhsia.uilib.widget.NotoTextView
+        android:id="@+id/tvHintCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.05"
+        android:text="@string/search_hint_caption"
+        android:textColor="@color/textCaption"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHintTitle"/>
+
+</android.support.constraint.ConstraintLayout>

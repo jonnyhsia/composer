@@ -1,0 +1,143 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#222222</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+        <!--<item name="labelTheme">@style/LabelViewTheme</item>-->
+    </style>
+
+    <style name="AppTheme.Translucent">
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="Text">
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="Text.Button">
+        <item name="android:textColor">@drawable/selector_button_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:minWidth">44dp</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="Text.Button.Highlight">
+        <item name="android:textColor">@drawable/selector_button_text_highlight</item>
+    </style>
+
+    <style name="Switch">
+        <item name="colorControlActivated">#4285F4</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button.Borderless">
+
+    </style>
+
+    <style name="AccountItem">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:minWidth">80dp</item>
+    </style>
+
+    <style name="PrefCategory">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="AboutLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="FilterLabel" parent="LabelViewTheme">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="labelFontFamily">bold</item>
+        <item name="captionTop">4dp</item>
+        <item name="captionTextColor">#505050</item>
+        <item name="captionFontFamily">@font/noto_sans_medium</item>
+        <item name="innerMarginTop">14dp</item>
+        <item name="innerMarginBottom">14dp</item>
+        <item name="innerMarginStart">24dp</item>
+        <item name="innerMarginEnd">14dp</item>
+        <item name="labelTextAppearance">@style/FilterLabelTextAppearance</item>
+        <item name="captionTextAppearance">@style/FilterCaptionTextAppearance</item>
+        <item name="labelType">_switch</item>
+    </style>
+
+    <style name="FilterLabelTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="FilterCaptionTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textColor">#505050</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextHomeSection" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextHomeSection.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="TextHomeSection.Description">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">@color/textCaption</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+</resources>

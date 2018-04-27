@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="20dp"
+              android:stateListAnimator="@animator/touch_raise">
+
+    <TextView
+        android:id="@+id/tvLibName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="@color/textPrimary"
+        android:textSize="18sp"
+        android:lineSpacingExtra="2dp"
+        android:textStyle="bold"
+        tools:text="Android Support Library"/>
+
+    <TextView
+        android:id="@+id/tvLibDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/textSecondary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="The Android Support Library offers backward-compatible versions of a number of features that are not built into the framework."/>
+
+</LinearLayout>

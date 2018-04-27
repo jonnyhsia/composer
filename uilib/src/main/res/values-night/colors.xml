@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="iconTint">#FFFFFFFF</color>
+    <color name="navPressed">#883F97EF</color>
+    <color name="navNormal">#3F97EF</color>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:paddingBottom="28dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        style="@style/TextHomeSection.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="感兴趣的话题" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/topicTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        app:tabBackground="@android:color/transparent"
+        app:tabMinWidth="24dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingStart="0dp" />
+
+    <com.jonnyhsia.uilib.widget.BounceRecyclerView
+        android:id="@+id/recycleTopicStories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp" />
+
+    <TextView
+        android:id="@+id/tvSeeTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_see_topic"
+        android:drawableEnd="@mipmap/ic_arrow_black"
+        android:drawablePadding="6dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="6dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold"
+        tools:text="@string/see_topic_of" />
+
+</LinearLayout>
