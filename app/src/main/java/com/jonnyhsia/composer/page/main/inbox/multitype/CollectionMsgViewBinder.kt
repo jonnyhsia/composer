@@ -8,17 +8,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
-
 import com.jonnyhsia.composer.R
 import com.jonnyhsia.composer.ext.bind
 import com.jonnyhsia.composer.ext.glidedsl.glide
 import com.jonnyhsia.model.inbox.entity.InboxMessage
 import com.jonnyhsia.uilib.ItemTap
-
 import me.drakeet.multitype.ItemViewBinder
 
 class CollectionMsgViewBinder(
-        val tapCollectionMsg: ItemTap
+        private val tapCollectionMsg: ItemTap
 ) : ItemViewBinder<InboxMessage, CollectionMsgViewBinder.ViewHolder>() {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {

@@ -4,6 +4,7 @@ import android.widget.ImageView
 import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 
@@ -20,10 +21,14 @@ class GlideDSL(
             transforms.add(value)
         }
 
-    override var cornerRadius: Float
+    override var cornerRadius: Int
         get() = throw IllegalAccessException("属性不可读")
         set(value) {
-            transforms.add(RoundedCorners(value.toInt()))
+            if (value == CIRCLE) {
+                transforms.add(CircleCrop())
+            } else {
+                transforms.add(RoundedCorners(value))
+            }
         }
 
     override var diskCacheStrategy: DiskCacheStrategy
@@ -59,5 +64,9 @@ class GlideDSL(
             else -> requestOptions
         }
         requestManager.load(model).apply(requestOptions).into(target)
+    }
+
+    companion object {
+        const val CIRCLE = -1
     }
 }
