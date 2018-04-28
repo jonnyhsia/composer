@@ -90,26 +90,15 @@ class HomeFragment : MvpFragment<HomeContract.Presenter>(), HomeContract.View, S
                     toast("收藏")
                 }
         ))
-        homeAdapter.register(TopicsStories::class, TopicsStoriesViewBinder {
+        homeAdapter.register(TopicsStories::class, FollowingTopicStoriesViewBinder {
 
         })
         homeAdapter.register(StoryCollections::class, StoryCollectionsViewBinder())
         homeAdapter.register(Advertisements::class, AdvertisementsViewBinder())
         homeAdapter.register(Inspirations::class, InspirationsViewBinder())
         homeAdapter.register(UpdatedFriends::class, UpdatedFriendsViewBinder())
-        homeAdapter.register(Topics::class, TopicsViewBinder())
-        homeAdapter.register(String::class, HomeFooterViewBinder())
-
-        homeAdapter.register(HomeChannel::class, HomeChannelViewBinder(
-                onTap = {
-                    toast("查看更多")
-                },
-                onStoryClick = {
-                    toast("故事")
-                },
-                onStoryCollect = {
-                    toast("收藏")
-                }))
+        homeAdapter.register(Topics::class, SuggestTopicsViewBinder())
+        homeAdapter.register(String::class, FooterViewBinder(R.mipmap.img_footer_no_more))
     }
 
     override fun bindHeaderData(dateString: String, headerRes: Int) {

@@ -4,19 +4,19 @@ import com.jonnyhsia.model.base.BaseRepository
 import com.jonnyhsia.model.base.CacheWrapper
 import com.jonnyhsia.model.base.RxHttpHandler
 import com.jonnyhsia.model.base.RxHttpSchedulers
-import com.jonnyhsia.model.inbox.entity.InboxMessages
+import com.jonnyhsia.model.inbox.entity.InboxMessage
 import io.reactivex.Single
 
 class InboxRepository : InboxDataSource, BaseRepository() {
 
     private val inboxApi = retrofit.create(InboxApi::class.java)
 
-    private val cachedInboxMessages = CacheWrapper<List<InboxMessages>>()
+    private val cachedInboxMessages = CacheWrapper<List<InboxMessage>>()
 
     override fun preload() {
     }
 
-    override fun fetchInboxMessages(): Single<List<InboxMessages>> {
+    override fun fetchInboxMessages(): Single<List<InboxMessage>> {
         cachedInboxMessages.unpack()?.let {
             return Single.just(it)
         }

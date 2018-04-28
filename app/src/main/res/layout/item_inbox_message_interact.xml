@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:paddingBottom="16dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/imgMessage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_avatar_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMsgUsername"
+        style="@style/Text.Inbox.Primary"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="高能的土豆" />
+
+    <TextView
+        android:id="@+id/tvMsgContent"
+        style="@style/Text.Inbox.Primary"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintEnd_toEndOf="@id/tvMsgUsername"
+        app:layout_constraintStart_toStartOf="@id/tvMsgUsername"
+        app:layout_constraintTop_toBottomOf="@id/tvMsgUsername"
+        tools:text="阿斯达门把手的吧撒娇动感 卡视角点击 萨迪克按时的" />
+
+    <TextView
+        android:id="@+id/tvContextTitle"
+        style="@style/Text.Inbox.Secondary"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="4dp"
+        android:drawableStart="@mipmap/ic_triangle"
+        android:textColor="@color/textCaption"
+        app:layout_constraintEnd_toEndOf="@id/tvMsgUsername"
+        app:layout_constraintStart_toStartOf="@id/tvMsgUsername"
+        app:layout_constraintTop_toBottomOf="@id/tvMsgContent"
+        tools:text="回复了你的评论" />
+
+    <TextView
+        android:id="@+id/tvContextContent"
+        style="@style/Text.Inbox.Secondary"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvMsgUsername"
+        app:layout_constraintStart_toStartOf="@id/tvMsgUsername"
+        app:layout_constraintTop_toBottomOf="@id/tvContextTitle"
+        tools:text="阿斯达门把手的吧撒娇动感 卡视角点击 萨迪克按时的" />
+
+
+</android.support.constraint.ConstraintLayout>

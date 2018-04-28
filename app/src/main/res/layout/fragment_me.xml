@@ -36,16 +36,15 @@
             app:label="@string/night_mode" />
 
         <com.jonnyhsia.labelview.LabelView
-            android:id="@+id/labelTheme"
-            style="@style/AccountLabel.Normal"
-            app:label="@string/change_theme"
-            app:subLabel="Lemonade" />
-
-        <com.jonnyhsia.labelview.LabelView
             android:id="@+id/labelTextSize"
             style="@style/AccountLabel.Normal"
             app:label="@string/pref_text_size"
             app:subLabel="普通" />
+
+        <com.jonnyhsia.labelview.LabelView
+            android:id="@+id/labelTheme"
+            style="@style/AccountLabel.Normal"
+            app:label="@string/change_theme" />
 
         <com.jonnyhsia.uilib.widget.NotoTextView
             style="@style/AccountSection"

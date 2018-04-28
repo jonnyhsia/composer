@@ -5,9 +5,9 @@
     android:paddingTop="10dp">
 
     <ImageView
+        android:id="@+id/imgFooter"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:scaleType="centerInside"
-        android:src="@mipmap/img_footer_no_more" />
+        android:scaleType="centerInside" />
 
 </FrameLayout>

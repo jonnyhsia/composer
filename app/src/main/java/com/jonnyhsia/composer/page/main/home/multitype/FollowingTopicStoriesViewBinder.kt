@@ -20,12 +20,15 @@ import com.jonnyhsia.model.home.entity.TopicsStories
 import com.jonnyhsia.uilib.dp2px
 import me.drakeet.multitype.ItemViewBinder
 
-class TopicsStoriesViewBinder(
+/**
+ * 正在关注的感兴趣的话题
+ */
+class FollowingTopicStoriesViewBinder(
         private val tapSeeTopic: (Topic) -> Unit
-) : ItemViewBinder<TopicsStories, TopicsStoriesViewBinder.ViewHolder>() {
+) : ItemViewBinder<TopicsStories, FollowingTopicStoriesViewBinder.ViewHolder>() {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
-        val root = inflater.inflate(R.layout.item_topics_stories, parent, false)
+        val root = inflater.inflate(R.layout.item_following_topic_stories, parent, false)
         return ViewHolder(root)
     }
 

@@ -2,7 +2,7 @@ package com.jonnyhsia.composer.page.main.search.searchshowcase
 
 import com.jonnyhsia.composer.R
 import com.jonnyhsia.composer.page.base.MvpFragment
-import com.jonnyhsia.composer.page.main.home.multitype.SimpleStoryViewBinder
+import com.jonnyhsia.composer.page.main.discover.multitype.SimpleStoryViewBinder
 import com.jonnyhsia.composer.page.main.search.multiitem.UserResultViewBinder
 import com.jonnyhsia.model.story.entity.Story
 import com.jonnyhsia.model.user.entity.User

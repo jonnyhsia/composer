@@ -9,7 +9,8 @@
 
     <View
         android:id="@+id/viewHandle"
-        android:layout_width="64dp"
+        android:layout_width="52dp"
+        android:layout_marginTop="4dp"
         android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape_sheet_handle"
@@ -19,6 +20,7 @@
 
     <com.jonnyhsia.labelview.LabelView
         style="@style/FilterLabel"
+        android:layout_marginTop="-4dp"
         android:id="@+id/labelEnableStoryPush"
         app:caption="你可能感兴趣的故事集的推荐通知"
         app:label="精彩故事推荐"/>
@@ -31,14 +33,8 @@
 
     <com.jonnyhsia.labelview.LabelView
         style="@style/FilterLabel"
-        android:id="@+id/labelCollapseComment"
-        app:caption="将近期的评论统一归纳"
-        app:label="折叠评论通知"/>
-
-    <com.jonnyhsia.labelview.LabelView
-        style="@style/FilterLabel"
         android:id="@+id/labelDisablePush"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         app:caption="将不能够获取或接收到通知"
         app:label="关闭所有通知"/>
 

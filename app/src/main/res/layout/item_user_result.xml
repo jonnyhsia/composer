@@ -9,7 +9,7 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/imgAvatar"
+        android:id="@+id/imgMessage"
         android:layout_width="40dp"
         android:layout_height="40dp"
         tools:src="@drawable/img_avatar_default"/>
@@ -22,7 +22,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/tvUserIntro"
-        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintStart_toEndOf="@id/imgMessage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="高能的土豆"/>

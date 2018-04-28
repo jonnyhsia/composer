@@ -49,6 +49,7 @@
         android:paddingBottom="4dp"
         android:paddingEnd="6dp"
         android:paddingStart="8dp"
+        android:stateListAnimator="@animator/touch_effect_alpha"
         android:paddingTop="4dp"
         android:textColor="@color/textPrimary"
         android:textStyle="bold"

@@ -1,6 +1,7 @@
-package com.jonnyhsia.composer.page.main.home.multitype
+package com.jonnyhsia.composer.page.main.discover.multitype
 
 import android.view.View
+import com.jonnyhsia.composer.page.main.home.multitype.StoryViewBinder
 import com.jonnyhsia.model.story.entity.Story
 import com.jonnyhsia.uilib.ItemTap
 import com.jonnyhsia.uilib.dp2px

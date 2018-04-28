@@ -1,4 +1,4 @@
-package com.jonnyhsia.composer.page.main.home.multitype
+package com.jonnyhsia.composer.page.main.discover.multitype
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -18,10 +18,10 @@ import me.drakeet.multitype.ItemViewBinder
 import me.drakeet.multitype.Items
 import me.drakeet.multitype.MultiTypeAdapter
 
-class HomeChannelViewBinder(private val onTap: SimpleTap,
-                            private val onStoryClick: ItemTap,
-                            private val onStoryCollect: ItemTap
-) : ItemViewBinder<HomeChannel, HomeChannelViewBinder.ViewHolder>() {
+class ChannelViewBinder(private val onTap: SimpleTap,
+                        private val onStoryClick: ItemTap,
+                        private val onStoryCollect: ItemTap
+) : ItemViewBinder<HomeChannel, ChannelViewBinder.ViewHolder>() {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
         val root = inflater.inflate(R.layout.item_home_channel, parent, false)

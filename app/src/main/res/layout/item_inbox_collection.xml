@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:paddingBottom="16dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/imgMessage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_avatar_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMsgCount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/shape_inbox_counter"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="1dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/imgMessage"
+        app:layout_constraintTop_toTopOf="@id/imgMessage"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/tvMsgTitle"
+        style="@style/Text.Inbox.Primary"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvMsgContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="高能的土豆" />
+
+    <TextView
+        android:id="@+id/tvMsgContent"
+        style="@style/Text.Inbox.Secondary"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvMsgTitle"
+        app:layout_constraintStart_toStartOf="@id/tvMsgTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvMsgTitle"
+        tools:text="阿斯达门把手的吧撒娇动感 卡视角点击 萨迪克按时的" />
+
+</android.support.constraint.ConstraintLayout>

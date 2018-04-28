@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/border_image"
     android:padding="1dp"
+    android:stateListAnimator="@animator/touch_effect_size"
     app:aspect_ratio="1.78">
 
 </com.jonnyhsia.uilib.widget.AspectRatioImageView>

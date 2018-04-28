@@ -38,6 +38,6 @@ class UserResultViewBinder(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgAvatar = bind<ImageView>(R.id.imgAvatar)
+        val imgAvatar = bind<ImageView>(R.id.imgMessage)
     }
 }

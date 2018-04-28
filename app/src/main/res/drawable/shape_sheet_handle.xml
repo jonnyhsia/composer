@@ -5,8 +5,8 @@
         android:top="12dp">
         <shape android:shape="rectangle">
             <corners android:radius="10dp"/>
-            <size android:height="6dp"/>
-            <solid android:color="#DDDDDD"/>
+            <size android:height="5dp"/>
+            <solid android:color="#E5E5E5"/>
         </shape>
     </item>
 </layer-list>

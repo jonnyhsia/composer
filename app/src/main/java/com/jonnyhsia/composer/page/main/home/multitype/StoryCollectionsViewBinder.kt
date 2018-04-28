@@ -24,6 +24,9 @@ import com.jonnyhsia.uilib.dp2px
 import me.drakeet.multitype.ItemViewBinder
 import java.util.Collections
 
+/**
+ * 故事合辑
+ */
 class StoryCollectionsViewBinder : ItemViewBinder<StoryCollections, StoryCollectionsViewBinder.ViewHolder>(), Corgi {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {

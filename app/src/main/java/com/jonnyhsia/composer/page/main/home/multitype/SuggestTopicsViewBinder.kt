@@ -23,7 +23,10 @@ import com.jonnyhsia.uilib.dp2px
 import me.drakeet.multitype.ItemViewBinder
 import java.util.Collections
 
-class TopicsViewBinder : ItemViewBinder<Topics, TopicsViewBinder.ViewHolder>(), Corgi {
+/**
+ * 推荐关注的话题
+ */
+class SuggestTopicsViewBinder : ItemViewBinder<Topics, SuggestTopicsViewBinder.ViewHolder>(), Corgi {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
         val root = inflater.inflate(R.layout.item_topics, parent, false)

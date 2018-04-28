@@ -9,6 +9,8 @@ import android.view.View
 
 class DividerDecoration(
         orientation: Int = LinearLayoutManager.VERTICAL,
+        val paddingBeginning: Int = 0,
+        val paddingEnd: Int = 0,
         private val dividerByPosition: (Int) -> Drawable?
 ) : RecyclerView.ItemDecoration() {
 
@@ -33,8 +35,8 @@ class DividerDecoration(
 
     // 画横线, 这里的 parent 其实是显示在屏幕显示的这部分
     private fun drawHorizontalLine(c: Canvas, parent: RecyclerView) {
-        val left = parent.paddingLeft
-        val right = parent.width - parent.paddingRight
+        val left = parent.paddingLeft + paddingBeginning
+        val right = parent.width - parent.paddingRight - paddingEnd
         val childCount = parent.childCount
 
         for (pos in 0 until childCount) {
@@ -53,8 +55,8 @@ class DividerDecoration(
 
     // 画竖线
     private fun drawVerticalLine(c: Canvas, parent: RecyclerView) {
-        val top = parent.paddingTop
-        val bottom = parent.height - parent.paddingBottom
+        val top = parent.paddingTop + paddingBeginning
+        val bottom = parent.height - parent.paddingBottom - paddingEnd
         val childCount = parent.childCount
 
         for (pos in 0 until childCount) {

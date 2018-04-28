@@ -39,7 +39,7 @@
         tools:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imgAvatar"
+        android:id="@+id/imgMessage"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:src="@drawable/img_avatar_default"
@@ -56,8 +56,8 @@
         android:textColor="@color/textSecondary"
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/tvReadTime"
-        app:layout_constraintStart_toEndOf="@id/imgAvatar"
-        app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+        app:layout_constraintStart_toEndOf="@id/imgMessage"
+        app:layout_constraintTop_toTopOf="@id/imgMessage" />
 
     <com.jonnyhsia.uilib.widget.NotoTextView
         android:id="@id/tvReadTime"
@@ -68,8 +68,8 @@
         android:text="大约 10 分钟阅读"
         android:textColor="@color/textCaption"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
-        app:layout_constraintStart_toEndOf="@id/imgAvatar"
+        app:layout_constraintBottom_toBottomOf="@id/imgMessage"
+        app:layout_constraintStart_toEndOf="@id/imgMessage"
         app:layout_constraintTop_toBottomOf="@id/tvUsername" />
 
     <ImageView
@@ -79,9 +79,9 @@
         android:layout_marginEnd="8dp"
         android:background="?android:selectableItemBackgroundBorderless"
         android:src="@mipmap/ic_more_horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMessage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgAvatar" />
+        app:layout_constraintTop_toTopOf="@+id/imgMessage" />
 
     <ImageView
         android:id="@+id/imgCollect"
@@ -90,8 +90,8 @@
         android:layout_marginEnd="16dp"
         android:background="?android:selectableItemBackgroundBorderless"
         android:src="@mipmap/ic_collect"
-        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMessage"
         app:layout_constraintEnd_toStartOf="@id/imgMore"
-        app:layout_constraintTop_toTopOf="@+id/imgAvatar" />
+        app:layout_constraintTop_toTopOf="@+id/imgMessage" />
 
 </android.support.constraint.ConstraintLayout>

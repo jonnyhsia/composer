@@ -27,6 +27,9 @@ import com.jonnyhsia.uilib.dp2px
 import com.jonnyhsia.uilib.sp2px
 import me.drakeet.multitype.ItemViewBinder
 
+/**
+ * 长条型故事 Cell
+ */
 abstract class StoryViewBinder(
         private val onStoryClick: ItemTap,
         private val onStoryCollect: ItemTap
@@ -72,6 +75,6 @@ abstract class StoryViewBinder(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgStory: ImageView = bind(R.id.imgStory)
-        val imgAvatar: ImageView = bind(R.id.imgAvatar)
+        val imgAvatar: ImageView = bind(R.id.imgMessage)
     }
 }

@@ -18,6 +18,9 @@ import me.drakeet.multitype.ItemViewBinder
 import me.drakeet.multitype.Items
 import me.drakeet.multitype.MultiTypeAdapter
 
+/**
+ * 头条故事
+ */
 class TopStoryViewBinder(
         private val onClickStory: ItemTap,
         private val onStoryCollect: ItemTap

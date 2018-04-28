@@ -47,7 +47,7 @@ class CardStoryAdapter(
         Glide.with(holder.context)
                 .load(story.images[0])
                 .apply(RequestOptions().transform(CircleCrop()))
-                .into(holder.bind(R.id.imgAvatar))
+                .into(holder.bind(R.id.imgMessage))
 
         holder.setText(R.id.tvUsername, story.author)
         // .setText(R.id.tvReadTime, "")

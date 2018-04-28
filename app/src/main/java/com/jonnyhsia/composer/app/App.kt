@@ -2,6 +2,7 @@ package com.jonnyhsia.composer.app
 
 import android.app.Application
 import android.content.Context
+import com.jakewharton.threetenabp.AndroidThreeTen
 import com.jonnyhsia.composer.BuildConfig
 import com.jonnyhsia.model.Repository
 import com.jonnyhsia.router.Router
@@ -38,6 +39,7 @@ class App : Application() {
 
         // Model 的初始化与预加载
         Repository.initialize(this)
+        AndroidThreeTen.init(this)
 
         // LeakCanary 与 Bugly 的初始化
         Apollo.init(AndroidSchedulers.mainThread(), this)

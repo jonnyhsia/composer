@@ -23,6 +23,9 @@ import com.jonnyhsia.uilib.dp2px
 import me.drakeet.multitype.ItemViewBinder
 import java.util.Collections
 
+/**
+ * 广告
+ */
 class AdvertisementsViewBinder : ItemViewBinder<Advertisements, AdvertisementsViewBinder.ViewHolder>(), Corgi {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {

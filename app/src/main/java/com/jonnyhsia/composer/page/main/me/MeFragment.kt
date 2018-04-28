@@ -1,13 +1,10 @@
 package com.jonnyhsia.composer.page.main.me
 
-//import kotlinx.android.synthetic.main.fragment_me.labelInbox
-//import kotlinx.android.synthetic.main.fragment_me.labelNightMode
-//import kotlinx.android.synthetic.main.fragment_me.labelTest
-//import kotlinx.android.synthetic.main.fragment_me.labelTextSize
 import com.jonnyhsia.composer.R
 import com.jonnyhsia.composer.ext.imageSource
 import com.jonnyhsia.composer.page.base.MvpFragment
 import com.jonnyhsia.composer.widget.Scroll2Top
+import com.jonnyhsia.model.config.entity.StoryFontSize
 import kotlinx.android.synthetic.main.fragment_me.*
 import kotlinx.android.synthetic.main.layout_account.*
 
@@ -25,7 +22,12 @@ class MeFragment : MvpFragment<MeContract.Presenter>(), MeContract.View, Scroll2
 
     override fun render() {
         tvNickname.text = "高能的土豆"
-        imgAvatar.imageSource = R.drawable.img_avatar_default
+        imgMessage.imageSource = R.drawable.img_avatar_default
+
+        labelTextSize.bindPreference(prefName = "appearance", prefKey = "text_size", defaultValue = 16) { labelView, prefValue ->
+            val fontSize = StoryFontSize.sizeOf(prefValue)
+            labelView.subLabel = fontSize.sizeName
+        }
 
         labelAbout.labelClicked {
             navigate("native://About")

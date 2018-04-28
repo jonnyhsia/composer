@@ -20,6 +20,9 @@ import com.jonnyhsia.uilib.dp2px
 import me.drakeet.multitype.ItemViewBinder
 import java.util.Collections
 
+/**
+ * 灵感卡片
+ */
 class InspirationsViewBinder : ItemViewBinder<Inspirations, InspirationsViewBinder.ViewHolder>(), Corgi {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {

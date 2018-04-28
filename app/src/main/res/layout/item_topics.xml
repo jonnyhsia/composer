@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:paddingBottom="20dp"
     android:paddingTop="20dp"
-    tools:context=".page.main.home.multitype.TopicsViewBinder">
+    tools:context=".page.main.home.multitype.SuggestTopicsViewBinder">
 
     <TextView
         style="@style/TextHomeSection.Title"

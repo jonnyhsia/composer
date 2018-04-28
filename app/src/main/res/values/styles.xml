@@ -11,14 +11,13 @@
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
         <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
-        <!--<item name="labelTheme">@style/LabelViewTheme</item>-->
+        <item name="labelTheme">@style/LabelViewTheme</item>
     </style>
 
     <style name="AppTheme.Translucent">
-        <!--<item name="android:windowTranslucentStatus">true</item>-->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <!--<item name="android:windowLightStatusBar">true</item>-->
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
@@ -95,7 +94,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="labelFontFamily">bold</item>
-        <item name="captionTop">4dp</item>
+        <item name="captionTop">5dp</item>
         <item name="captionTextColor">#505050</item>
         <item name="captionFontFamily">@font/noto_sans_medium</item>
         <item name="innerMarginTop">14dp</item>
@@ -108,7 +107,7 @@
     </style>
 
     <style name="FilterLabelTextAppearance" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:letterSpacing">0.04</item>
+        <item name="android:letterSpacing">0.08</item>
         <item name="android:textSize">15sp</item>
     </style>
 
@@ -138,6 +137,21 @@
         <item name="android:layout_marginTop">3dp</item>
         <item name="android:textColor">@color/textCaption</item>
         <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Text.Inbox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="Text.Inbox.Primary"></style>
+
+    <style name="Text.Inbox.Secondary">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textSecondary</item>
     </style>
 
 </resources>

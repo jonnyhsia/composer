@@ -35,4 +35,5 @@
     <string name="change_log">更新日志</string>
     <string name="see_topic_of">浏览 #%s</string>
     <string name="change_theme">自定义主題</string>
+    <string name="date_of_notification">%d月%d日，周%c</string>
 </resources>

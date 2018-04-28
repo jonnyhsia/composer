@@ -20,6 +20,9 @@ import com.jonnyhsia.uilib.dp2px
 import me.drakeet.multitype.ItemViewBinder
 import java.util.Collections
 
+/**
+ * 近期更新故事的好友
+ */
 class UpdatedFriendsViewBinder : ItemViewBinder<UpdatedFriends, UpdatedFriendsViewBinder.ViewHolder>(), Corgi {
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
