@@ -6,6 +6,8 @@ import android.view.View
 import com.jonnyhsia.composer.R
 import com.jonnyhsia.composer.ext.addOrShowFragment
 import com.jonnyhsia.composer.page.base.ComposerActivity
+import com.jonnyhsia.composer.page.main.bookmark.BookmarkFragment
+import com.jonnyhsia.composer.page.main.bookmark.BookmarkPresenter
 import com.jonnyhsia.composer.page.main.discover.DiscoverFragment
 import com.jonnyhsia.composer.page.main.discover.DiscoverPresenter
 import com.jonnyhsia.composer.page.main.home.HomeFragment
@@ -14,8 +16,7 @@ import com.jonnyhsia.composer.page.main.inbox.InboxFragment
 import com.jonnyhsia.composer.page.main.inbox.InboxPresenter
 import com.jonnyhsia.composer.page.main.me.MeFragment
 import com.jonnyhsia.composer.page.main.me.MePresenter
-import com.jonnyhsia.composer.widget.ComposerToast
-import com.jonnyhsia.composer.widget.Scroll2Top
+import com.jonnyhsia.composer.widget.TabReTapCallback
 import com.jonnyhsia.composer.widget.archivesheet.ArchiveSelectorSheet
 import com.jonnyhsia.model.Repository
 import com.jonnyhsia.model.base.rx.addTo
@@ -55,27 +56,28 @@ class MainActivity : ComposerActivity() {
     private fun setUpBottomNavigation() {
         Arrays.asList(
                 BottomNavigation.BottomNavItem(R.mipmap.ic_nav_timeline),
-                BottomNavigation.BottomNavItem(R.mipmap.ic_nav_stories, R.mipmap.ic_nav_stories_active),
+                BottomNavigation.BottomNavItem(R.mipmap.ic_nav_discover),
+                BottomNavigation.BottomNavItem(R.mipmap.ic_nav_bookmark, R.mipmap.ic_nav_bookmark_active),
                 BottomNavigation.BottomNavItem(R.mipmap.ic_nav_inbox),
                 BottomNavigation.BottomNavItem(R.mipmap.ic_nav_me, R.mipmap.ic_nav_me_active)
         ).let {
             bottomNavigation.setNavItems(it).apply {
-                addPrimarySelectListener {
-                    navigate("native://Compose")
-                }
-                addPrimaryLongPressListener {
-                    if (archives.isNotEmpty()) {
-                        showSelectArchiveSheet(archives)
-                    } else {
-                        ComposerToast.show(this@MainActivity, "没有可用的草稿")
-                    }
-                    true
-                }
+                //                addPrimarySelectListener {
+//                    navigate("native://Compose")
+//                }
+//                addPrimaryLongPressListener {
+//                    if (archives.isNotEmpty()) {
+//                        showSelectArchiveSheet(archives)
+//                    } else {
+//                        ComposerToast.show(this@MainActivity, "没有可用的草稿")
+//                    }
+//                    true
+//                }
                 addItemSelectListener { oldPos, pos, _ ->
                     homePageNavigate(oldPos, pos)
                 }
                 addItemReselectListener { pos, _ ->
-                    (findFragmentByIndex(pos) as? Scroll2Top)?.scroll2Top()
+                    (findFragmentByIndex(pos) as? TabReTapCallback)?.onReTap()
                 }
             }.performClickItem(0)
         }
@@ -122,8 +124,9 @@ class MainActivity : ComposerActivity() {
                         HomeFragment().apply { bindPresenter(HomePresenter(this)) }
                     }
                     1 -> DiscoverFragment().apply { bindPresenter(DiscoverPresenter(this)) }
-                    2 -> InboxFragment().apply { bindPresenter(InboxPresenter(this)) }
-                    3 -> MeFragment().apply { bindPresenter(MePresenter(this)) }
+                    2 -> BookmarkFragment().apply { bindPresenter(BookmarkPresenter(this)) }
+                    3 -> InboxFragment().apply { bindPresenter(InboxPresenter(this)) }
+                    4 -> MeFragment().apply { bindPresenter(MePresenter(this)) }
                     else -> throw IllegalArgumentException("Unexpected index of fragment.")
                 }
     }

@@ -44,7 +44,7 @@ class InspirationsViewBinder : ItemViewBinder<Inspirations, InspirationsViewBind
         val recycleInspirations = bind<RecyclerView>(R.id.recycleInspirations).apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            addItemDecoration(DividerHorizontal(false, false, dp2px(10).toInt()))
+            addItemDecoration(DividerHorizontal(dp2px(10).toInt()))
             GravityPagerSnapHelper(Gravity.START).attachToRecyclerView(this)
         }
     }

@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="20dp"
-    android:paddingTop="20dp">
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
 
     <TextView
         style="@style/TextHomeSection.Title"
@@ -28,6 +28,8 @@
         android:nestedScrollingEnabled="false"
         android:paddingEnd="20dp"
         android:paddingStart="20dp"
-        tools:listitem="@layout/item_big_story" />
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_big_story"
+        tools:orientation="horizontal" />
 
 </LinearLayout>

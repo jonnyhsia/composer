@@ -1,5 +1,7 @@
 package com.jonnyhsia.composer.page.main.inbox
 
+import android.os.Handler
+import androidx.core.os.postDelayed
 import com.jonnyhsia.composer.page.base.PresenterImpl
 import com.jonnyhsia.model.Repository
 import com.jonnyhsia.model.inbox.entity.InboxMessage
@@ -40,7 +42,9 @@ class InboxPresenter(
         notifications.add(InboxMessage.interact("阿斯达门把手的吧撒娇动感，卡视角点击，萨迪克按时的", date2.time, "阿斯达门把手的吧撒娇动感 卡视角点击 萨迪克按时的"))
         notifications.add(InboxMessage.collection(5, date2.time))
         notifications.add("到底了")
-        view.showInboxMessageList(notifications)
+        Handler().postDelayed(300) {
+            view.showInboxMessageList(notifications)
+        }
 //        inboxDataSource.fetchInboxMessages()
 //                .execute {
 //                    view.showInboxMessageList(it)

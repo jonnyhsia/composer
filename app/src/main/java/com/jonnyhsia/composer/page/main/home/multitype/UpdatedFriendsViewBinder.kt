@@ -43,7 +43,7 @@ class UpdatedFriendsViewBinder : ItemViewBinder<UpdatedFriends, UpdatedFriendsVi
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val recycleUpdateFriends = bind<RecyclerView>(R.id.recycleUpdateFriends).apply {
             setHasFixedSize(true)
-            addItemDecoration(DividerHorizontal(false, false, dp2px(10).toInt()))
+            addItemDecoration(DividerHorizontal(dp2px(10).toInt()))
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
     }

@@ -84,12 +84,11 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="53dp"
                 android:background="@drawable/selector_search_bar"
                 android:cursorVisible="false"
                 android:drawablePadding="8dp"
                 android:drawableStart="@mipmap/ic_search"
-                android:drawableTint="@color/textDisable"
                 android:focusableInTouchMode="false"
                 android:fontFamily="@font/noto_sans"
                 android:gravity="center_vertical"
@@ -111,7 +110,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <com.jonnyhsia.composer.widget.BetterRecyclerView
         android:id="@+id/recycleHomePage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

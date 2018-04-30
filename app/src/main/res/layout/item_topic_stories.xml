@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="224dp"
+    android:layout_width="240dp"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -42,6 +42,7 @@
         android:id="@+id/imgMessage"
         android:layout_width="28dp"
         android:layout_height="28dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/img_avatar_default"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvStoryContent" />

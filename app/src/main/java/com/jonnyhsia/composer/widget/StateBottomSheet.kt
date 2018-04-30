@@ -43,8 +43,8 @@ class StateBottomSheet : BottomSheetDialogFragment() {
 //    /**
 //     * 设置 bottom sheet 按钮的动作
 //     */
-//    fun setSheetAction(scroll2Top: () -> Unit) {
-//        sheetAction = scroll2Top
+//    fun setSheetAction(onReTap: () -> Unit) {
+//        sheetAction = onReTap
 //    }
 //
 //    /**
@@ -67,7 +67,7 @@ class StateBottomSheet : BottomSheetDialogFragment() {
 //        private val EXTRA_TITLE = "title"
 //        private val EXTRA_BG_RES = "bgRes"
 //        private val EXTRA_DESCRIPTION = "description"
-//        private val EXTRA_ACTION = "scroll2Top"
+//        private val EXTRA_ACTION = "onReTap"
 //
 //        /**
 //         * 通过状态枚举来生成 bottom sheet
@@ -78,7 +78,7 @@ class StateBottomSheet : BottomSheetDialogFragment() {
 //                putInt(EXTRA_TITLE, state.title)
 //                putInt(EXTRA_BG_RES, state.bgRes)
 //                putInt(EXTRA_DESCRIPTION, state.description)
-//                putInt(EXTRA_ACTION, state.scroll2Top)
+//                putInt(EXTRA_ACTION, state.onReTap)
 //            }
 //            return sheet
 //        }
@@ -90,7 +90,7 @@ class StateBottomSheet : BottomSheetDialogFragment() {
 //    enum class State(@StringRes val title: Int,
 //                     @IdRes val bgRes: Int,
 //                     @StringRes val description: Int,
-//                     @StringRes val scroll2Top: Int) {
+//                     @StringRes val onReTap: Int) {
 //
 //        OFFLINE(R.string.error_offline, R.mipmap.img_state_network_error, R.string.error_offline_description, R.string.error_offline_action),
 //        REQUEST_FAILED(R.string.error_request_failed, R.mipmap.img_state_request_failed, R.string.error_request_failed_description, R.string.error_request_failed_action);

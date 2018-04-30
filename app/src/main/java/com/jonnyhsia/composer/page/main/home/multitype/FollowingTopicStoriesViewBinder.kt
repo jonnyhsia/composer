@@ -80,7 +80,7 @@ class FollowingTopicStoriesViewBinder(
         val recycleTopicStories = bind<RecyclerView>(R.id.recycleTopicStories).apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            addItemDecoration(DividerHorizontal(false, false, dp2px(10).toInt()))
+            addItemDecoration(DividerHorizontal(dp2px(10).toInt()))
             GravitySnapHelper(Gravity.START).attachToRecyclerView(this)
         }
 

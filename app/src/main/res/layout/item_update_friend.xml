@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="120dp"
     android:layout_height="160dp"
+    android:stateListAnimator="@animator/touch_effect_size"
     app:cardCornerRadius="6dp"
     app:cardElevation="0dp">
 

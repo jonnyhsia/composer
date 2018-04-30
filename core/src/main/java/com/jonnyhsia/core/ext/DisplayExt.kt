@@ -41,6 +41,9 @@ fun TextView.tintRelativeDrawable(gravity: RelativeGravity, @ColorInt tintColor:
     val drawableTop = drawables[1]
     val drawableEnd = drawables[2]
     val drawableBottom = drawables[3]
+
+    drawables[gravity.ordinal] ?: return
+
     val tintDrawable = drawables[gravity.ordinal].tint(tintColor)
 
     when (gravity) {

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     android:orientation="vertical"
-    android:paddingBottom="20dp"
+    android:paddingBottom="24dp"
     android:paddingTop="20dp"
     tools:context=".page.main.home.multitype.SuggestTopicsViewBinder">
 
@@ -23,6 +23,9 @@
         android:clipToPadding="false"
         android:nestedScrollingEnabled="false"
         android:paddingEnd="20dp"
-        android:paddingStart="20dp" />
+        android:paddingStart="20dp"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_suggest_topic"
+        tools:orientation="horizontal" />
 
 </LinearLayout>

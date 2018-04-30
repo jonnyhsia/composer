@@ -33,7 +33,7 @@
 
         <activity
             android:name=".page.main.MainActivity"
-            android:theme="@style/AppTheme.Translucent"
+            android:theme="@style/AppTheme.Immersive"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <activity android:name=".page.notfound.NotFoundActivity"/>
@@ -45,6 +45,7 @@
             android:windowSoftInputMode="stateVisible|adjustPan"/>
         <activity android:name=".page.about.AboutActivity"/>
         <activity android:name=".page.credit.CreditActivity"/>
+        <activity android:name=".page.egg.EggActivity" android:theme="@style/AppTheme.Translucent.FullScreen"/>
 
     </application>
 

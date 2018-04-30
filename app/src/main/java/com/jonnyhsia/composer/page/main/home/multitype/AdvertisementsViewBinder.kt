@@ -47,7 +47,7 @@ class AdvertisementsViewBinder : ItemViewBinder<Advertisements, AdvertisementsVi
         val recycleAdvertisement = bind<RecyclerView>(R.id.recycleAdvertisement).apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            addItemDecoration(DividerHorizontal(false, false, dp2px(10).toInt()))
+            addItemDecoration(DividerHorizontal(dp2px(10).toInt()))
             GravityPagerSnapHelper(Gravity.START).attachToRecyclerView(this)
         }
     }

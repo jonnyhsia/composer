@@ -22,7 +22,6 @@
         android:layout_gravity="bottom"
         android:background="@color/windowBg"
         android:elevation="8dp"
-        app:primaryIcon="@mipmap/ic_nav_create_dark"
-        app:primaryEnable="true"/>
+        app:primaryEnable="false"/>
 
 </FrameLayout>

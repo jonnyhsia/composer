@@ -39,7 +39,6 @@
             app:layout_constraintTop_toBottomOf="@+id/imgAd"
             tools:text="When life gives you lemons,\nMake lemonade." />
 
-
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

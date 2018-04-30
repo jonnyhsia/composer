@@ -1,7 +1,9 @@
 package com.jonnyhsia.composer.page.main.home
 
 import android.content.Context
+import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
+import android.os.Vibrator
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.widget.LinearLayoutManager
@@ -12,21 +14,28 @@ import com.jonnyhsia.composer.page.base.MvpFragment
 import com.jonnyhsia.composer.page.base.OnBackPressed
 import com.jonnyhsia.composer.page.main.home.multitype.*
 import com.jonnyhsia.composer.page.main.search.SearchActivity
-import com.jonnyhsia.composer.widget.Scroll2Top
+import com.jonnyhsia.composer.widget.TabReTapCallback
+import com.jonnyhsia.core.RelativeGravity
+import com.jonnyhsia.core.ext.tintRelativeDrawable
 import com.jonnyhsia.model.Repository
 import com.jonnyhsia.model.home.entity.*
 import com.jonnyhsia.model.story.entity.Archive
+import com.jonnyhsia.uilib.getColorCompat
 import kotlinx.android.synthetic.main.fragment_home.*
 import me.drakeet.multitype.Items
 import me.drakeet.multitype.MultiTypeAdapter
 import me.drakeet.multitype.register
 import java.util.Date
 
-class HomeFragment : MvpFragment<HomeContract.Presenter>(), HomeContract.View, Scroll2Top {
+class HomeFragment : MvpFragment<HomeContract.Presenter>(), HomeContract.View, TabReTapCallback {
 
     private val homeAdapter = MultiTypeAdapter()
 
     private var isLightStatus = false
+
+    private val vibrator: Vibrator? by lazy {
+        activity?.getSystemService(VIBRATOR_SERVICE) as? Vibrator
+    }
 
     private val onBackPressed: OnBackPressed = {
         false
@@ -35,6 +44,8 @@ class HomeFragment : MvpFragment<HomeContract.Presenter>(), HomeContract.View, S
     override fun bindLayoutRes() = R.layout.fragment_home
 
     override fun render() {
+        searchBar.tintRelativeDrawable(RelativeGravity.START, getColorCompat(R.color.textDisable))
+
         recycleHomePage.layoutManager = LinearLayoutManager(context)
         recycleHomePage.adapter = homeAdapter.also { registerAdapter() }
 
@@ -96,6 +107,7 @@ class HomeFragment : MvpFragment<HomeContract.Presenter>(), HomeContract.View, S
         homeAdapter.register(StoryCollections::class, StoryCollectionsViewBinder())
         homeAdapter.register(Advertisements::class, AdvertisementsViewBinder())
         homeAdapter.register(Inspirations::class, InspirationsViewBinder())
+        homeAdapter.register(StorySeriesList::class, UpdatedSeriesListViewBinder())
         homeAdapter.register(UpdatedFriends::class, UpdatedFriendsViewBinder())
         homeAdapter.register(Topics::class, SuggestTopicsViewBinder())
         homeAdapter.register(String::class, FooterViewBinder(R.mipmap.img_footer_no_more))
@@ -118,7 +130,7 @@ class HomeFragment : MvpFragment<HomeContract.Presenter>(), HomeContract.View, S
         }
     }
 
-    override fun scroll2Top() {
+    override fun onReTap() {
         Archive(0, "你好", "内容内容内容", Date()).let {
             Repository.getStoryDataSource().insertArchive(it)
                     .subscribe {

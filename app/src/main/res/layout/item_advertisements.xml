@@ -16,11 +16,11 @@
         android:layout_height="wrap_content"
         android:text="土豆的金主们" />
 
-    <TextView
-        style="@style/TextHomeSection.Description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="看一看瞧一瞧，听金主们把话聊" />
+    <!--<TextView-->
+        <!--style="@style/TextHomeSection.Description"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="看一看瞧一瞧，听金主们把话聊" />-->
 
     <com.jonnyhsia.uilib.widget.BounceRecyclerView
         android:id="@+id/recycleAdvertisement"

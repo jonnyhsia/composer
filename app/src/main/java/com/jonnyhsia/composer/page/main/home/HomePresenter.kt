@@ -47,6 +47,15 @@ class HomePresenter(
         // Collections
         homePageModels.add(StoryCollections(Arrays.asList(
                 StoryCollections.StoryCollection(0, "", "", "http://ou4f31a1x.bkt.clouddn.com/18-4-26/3027512.jpg"))))
+        // Series
+        homePageModels.add(StorySeriesList(Arrays.asList(
+                StorySeriesList.StorySeries(0, "Kotlin Koans", "", ContentLibrary.randomCoverImage()),
+                StorySeriesList.StorySeries(0, "跟我一起去留学", "", ContentLibrary.randomCoverImage()),
+                StorySeriesList.StorySeries(0, "土豆的旅行专栏", "", ContentLibrary.randomCoverImage()),
+                StorySeriesList.StorySeries(0, "面向对象编程", "", ContentLibrary.randomCoverImage()),
+                StorySeriesList.StorySeries(0, "🥔", "", ContentLibrary.randomCoverImage()),
+                StorySeriesList.StorySeries(0, "OASIS", "", ContentLibrary.randomCoverImage())
+        )))
         // Topic
         homePageModels.add(Topics.sample(App.INSTANCE.resources.getStringArray(R.array.home_suggest_topic).asList()))
         // Inspiration

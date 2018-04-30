@@ -29,6 +29,7 @@
         android:clipToPadding="false"
         android:nestedScrollingEnabled="false"
         android:paddingEnd="20dp"
-        android:paddingStart="20dp" />
+        android:paddingStart="20dp"
+        tools:listitem="@layout/item_update_friend" />
 
 </LinearLayout>

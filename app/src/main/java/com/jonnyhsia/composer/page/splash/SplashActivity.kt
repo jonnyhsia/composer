@@ -28,8 +28,6 @@ class SplashActivity : ComposerActivity(), RxNoLeak {
     override fun bindLayoutRes() = R.layout.activity_splash
 
     override fun onContentViewCreated(savedInstanceState: Bundle?) {
-        navigate("native://Main")
-        finish()
 
         // 开始计时, 并请求首页的数据
         val startTime = System.currentTimeMillis()
@@ -92,6 +90,8 @@ class SplashActivity : ComposerActivity(), RxNoLeak {
      */
     private fun triggerBonusScene() {
         toast("🥔")
+        finish()
+        navigate("native://Egg")
     }
 
     override fun onStart() {
@@ -113,6 +113,6 @@ class SplashActivity : ComposerActivity(), RxNoLeak {
     }
 
     companion object {
-        const val ACCEPTABLE_LOADING_TIME = 2000L
+        const val ACCEPTABLE_LOADING_TIME = 1600L
     }
 }

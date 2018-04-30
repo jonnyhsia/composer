@@ -28,7 +28,7 @@ class TopStoryViewBinder(
 
     override fun onCreateViewHolder(inflater: LayoutInflater, parent: ViewGroup): ViewHolder {
         val root = inflater.inflate(R.layout.item_top_story, parent, false)
-        val divider = DividerHorizontal(false, false, root.dp2px(10).toInt())
+        val divider = DividerHorizontal(root.dp2px(10).toInt())
         return ViewHolder(root, divider)
     }
 

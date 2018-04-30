@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     android:orientation="vertical"
-    android:paddingBottom="28dp"
+    android:paddingBottom="24dp"
     android:paddingTop="20dp">
 
     <TextView
@@ -24,6 +24,7 @@
         app:tabBackground="@android:color/transparent"
         app:tabMinWidth="24dp"
         app:tabMode="scrollable"
+        app:tabTextAppearance="@style/TextTabFollowingTopic"
         app:tabPaddingEnd="0dp"
         app:tabPaddingStart="0dp" />
 
@@ -35,22 +36,25 @@
         android:clipToPadding="false"
         android:nestedScrollingEnabled="false"
         android:paddingEnd="20dp"
-        android:paddingStart="20dp" />
+        android:paddingStart="20dp"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_topic_stories"
+        tools:orientation="horizontal" />
 
     <TextView
         android:id="@+id/tvSeeTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/selector_see_topic"
         android:drawableEnd="@mipmap/ic_arrow_black"
         android:drawablePadding="6dp"
         android:paddingBottom="4dp"
         android:paddingEnd="6dp"
         android:paddingStart="8dp"
-        android:stateListAnimator="@animator/touch_effect_alpha"
         android:paddingTop="4dp"
+        android:stateListAnimator="@animator/touch_effect_alpha"
         android:textColor="@color/textPrimary"
         android:textStyle="bold"
         tools:text="@string/see_topic_of" />

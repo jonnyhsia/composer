@@ -143,11 +143,11 @@ fun RecyclerView.ViewHolder.setText(@IdRes id: Int, text: CharSequence): Recycle
 }
 
 fun RecyclerView.ViewHolder.setOnClickListener(@IdRes id: Int, onTap: SimpleTap) {
-    bind<View>(id)?.setOnClickListener(onTap)
+    bind<View>(id).setOnClickListener(onTap)
 }
 
 fun RecyclerView.ViewHolder.setOnItemClickListener(@IdRes id: Int, onClick: ItemTap) {
-    bind<View>(id)?.setOnClickListener {
+    bind<View>(id).setOnClickListener {
         onClick(adapterPosition)
     }
 }

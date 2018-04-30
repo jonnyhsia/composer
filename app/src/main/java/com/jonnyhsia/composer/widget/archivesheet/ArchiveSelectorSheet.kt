@@ -9,25 +9,18 @@ import android.support.design.widget.BottomSheetDialog
 import android.support.design.widget.BottomSheetDialogFragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.SwitchCompat
 import android.view.View
-import androidx.core.view.setPadding
-import com.jakewharton.rxbinding2.widget.RxCompoundButton
 import com.jonnyhsia.composer.R
-import com.jonnyhsia.composer.widget.toast
+import com.jonnyhsia.composer.widget.DividerVertical
 import com.jonnyhsia.core.Corgi
-import com.jonnyhsia.core.ext.otherwise
-import com.jonnyhsia.core.ext.yes
-import com.jonnyhsia.model.Repository
 import com.jonnyhsia.model.base.rx.RxNoLeak
-import com.jonnyhsia.model.base.rx.noLeak
 import com.jonnyhsia.model.story.entity.Archive
 import com.jonnyhsia.uilib.ItemTap
 import com.jonnyhsia.uilib.dp2px
 import io.reactivex.disposables.CompositeDisposable
+import me.drakeet.multitype.Items
 import me.drakeet.multitype.MultiTypeAdapter
 import me.drakeet.multitype.register
-import me.drakeet.multitype.withKClassLinker
 import kotlin.properties.Delegates
 
 
@@ -68,23 +61,24 @@ class ArchiveSelectorSheet : BottomSheetDialogFragment(), RxNoLeak, Corgi {
             // 设置 RecyclerView 与 Adapter
             findViewById<RecyclerView>(R.id.recycleSelections).apply {
                 setHasFixedSize(true)
-                layoutManager = LinearLayoutManager(context)
+                addItemDecoration(DividerVertical(dp2px(10).toInt(), drawTop = true, drawBottom = true))
+                layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                 adapter = initAdapter()
             }
 
             // 设置 Switch 监听
-            findViewById<SwitchCompat>(R.id.switchAutoSave).also { bindCheckedListener(it) }
+            // findViewById<SwitchCompat>(R.id.switchAutoSave).also { bindCheckedListener(it) }
         }
 
         dialog.setContentView(view)
-
 
         // 获取 Dialog 内容布局的 parent
         val root = view.parent as? View
         root?.apply {
             // 设置 root 的背景色为透明
             setBackgroundColor(Color.TRANSPARENT)
-            setPadding(dp2px(10).toInt())
+            val padding = dp2px(10).toInt()
+            setPaddingRelative(padding, paddingTop, padding, paddingBottom)
         }
 
         // 获取 Behavior (setContentView 后调用, 否则 view.parent == null)
@@ -109,45 +103,33 @@ class ArchiveSelectorSheet : BottomSheetDialogFragment(), RxNoLeak, Corgi {
         return dialog
     }
 
-    private fun bindCheckedListener(switch: SwitchCompat) {
-        RxCompoundButton.checkedChanges(switch)
-                .skipInitialValue()
-                .subscribe({ checked ->
-                    Repository.getPassportDataSource().enableSaveArchiveAlert(
-                            checked yes {
-                                switch.text = "未发布的草稿"
-                            } otherwise {
-                                switch.text = "自动保存已关闭"
-                                toast("可前往设置开启自动保存")
-                            })
-                }, {
-                    it.printStackTrace()
-                })
-                .noLeak(this)
-    }
+//    private fun bindCheckedListener(switch: SwitchCompat) {
+//        RxCompoundButton.checkedChanges(switch)
+//                .skipInitialValue()
+//                .subscribe({ checked ->
+//                    Repository.getPassportDataSource().enableSaveArchiveAlert(
+//                            checked yes {
+//                                switch.text = "选择从草稿创建…"
+//                            } otherwise {
+//                                switch.text = "自动保存已关闭"
+//                                toast("可前往设置开启自动保存")
+//                            })
+//                }, {
+//                    it.printStackTrace()
+//                })
+//                .noLeak(this)
+//    }
 
     private fun initAdapter(): MultiTypeAdapter {
-        val size = archives.size
-        return MultiTypeAdapter(archives).apply {
-            register(Archive::class).to(
-                    ArchiveBinder {
-                        archiveSelectedListener(it)
-                        dismiss()
-                    },
-                    ArchivePrimaryBinder {
-                        archiveSelectedListener(it)
-                        dismiss()
-                    }
-            ).withKClassLinker { position, t ->
-                // 偶数个 Item 时, 第偶数个 Item 是白色
-                val isDouble = position % 2 == 0
-                val isWhiteFirst = if (size % 2 == 0) isDouble else !isDouble
-                if (isWhiteFirst) {
-                    ArchivePrimaryBinder::class
-                } else {
-                    ArchiveBinder::class
-                }
-            }
+        val items = Items()
+        items.add("Header")
+        items.addAll(archives)
+        return MultiTypeAdapter(items).apply {
+            register(String::class, ArchiveHeaderViewBinder())
+            register(Archive::class, ArchiveBinder {
+                archiveSelectedListener(it)
+                dismiss()
+            })
         }
     }
 

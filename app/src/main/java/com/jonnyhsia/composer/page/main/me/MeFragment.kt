@@ -3,12 +3,12 @@ package com.jonnyhsia.composer.page.main.me
 import com.jonnyhsia.composer.R
 import com.jonnyhsia.composer.ext.imageSource
 import com.jonnyhsia.composer.page.base.MvpFragment
-import com.jonnyhsia.composer.widget.Scroll2Top
+import com.jonnyhsia.composer.widget.TabReTapCallback
 import com.jonnyhsia.model.config.entity.StoryFontSize
 import kotlinx.android.synthetic.main.fragment_me.*
 import kotlinx.android.synthetic.main.layout_account.*
 
-class MeFragment : MvpFragment<MeContract.Presenter>(), MeContract.View, Scroll2Top {
+class MeFragment : MvpFragment<MeContract.Presenter>(), MeContract.View, TabReTapCallback {
 
     override fun bindLayoutRes() = R.layout.fragment_me
 
@@ -166,7 +166,7 @@ class MeFragment : MvpFragment<MeContract.Presenter>(), MeContract.View, Scroll2
     //            }
     //        }*/
 
-    override fun scroll2Top() {
+    override fun onReTap() {
         scrollView?.smoothScrollTo(0, 0)
     }
 

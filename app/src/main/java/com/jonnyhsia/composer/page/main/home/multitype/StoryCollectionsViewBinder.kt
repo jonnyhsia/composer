@@ -47,7 +47,7 @@ class StoryCollectionsViewBinder : ItemViewBinder<StoryCollections, StoryCollect
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val recycleStoryCollections = bind<RecyclerView>(R.id.recycleStoryCollections).apply {
             setHasFixedSize(true)
-            addItemDecoration(DividerHorizontal(false, false, dp2px(10).toInt()))
+            addItemDecoration(DividerHorizontal(dp2px(10).toInt()))
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
     }

@@ -24,7 +24,7 @@
         android:layout_height="1dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:background="@color/divider" />
 
     <android.support.v4.widget.SwipeRefreshLayout

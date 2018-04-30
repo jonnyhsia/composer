@@ -17,6 +17,7 @@ import com.jonnyhsia.composer.page.main.inbox.multitype.InteractMsgViewBinder
 import com.jonnyhsia.composer.page.main.inbox.multitype.PushMsgViewBinder
 import com.jonnyhsia.composer.widget.SheetAlert
 import com.jonnyhsia.composer.widget.SheetDragCallback
+import com.jonnyhsia.composer.widget.TabReTapCallback
 import com.jonnyhsia.labelview.LabelView
 import com.jonnyhsia.model.inbox.entity.InboxMessage
 import com.jonnyhsia.uilib.dp2px
@@ -25,7 +26,7 @@ import kotlinx.android.synthetic.main.fragment_inbox.*
 import me.drakeet.multitype.*
 import java.util.Date
 
-class InboxFragment : MvpFragment<InboxContract.Presenter>(), InboxContract.View {
+class InboxFragment : MvpFragment<InboxContract.Presenter>(), InboxContract.View, TabReTapCallback {
 
 
     private val inboxAdapter = MultiTypeAdapter()
@@ -101,7 +102,7 @@ class InboxFragment : MvpFragment<InboxContract.Presenter>(), InboxContract.View
 
     private fun registerAdapter() {
         inboxAdapter.register(Date::class, DateViewBinder())
-        inboxAdapter.register(String::class, FooterViewBinder(R.mipmap.img_footer_no_more))
+        inboxAdapter.register(String::class, FooterViewBinder(R.mipmap.img_footer_inbox_no_more))
 
         val interactBinder = InteractMsgViewBinder(presenter::tapInteractMsg)
         val collectionBinder = CollectionMsgViewBinder(presenter::tapCollectionMsg)
@@ -128,5 +129,9 @@ class InboxFragment : MvpFragment<InboxContract.Presenter>(), InboxContract.View
         if (!inboxFilterSheet.isAdded) {
             inboxFilterSheet.show(childFragmentManager, "inbox_filter")
         }
+    }
+
+    override fun onReTap() {
+        toast("时光机功能正在开发中…")
     }
 }

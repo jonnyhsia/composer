@@ -5,12 +5,12 @@
         android:state_pressed="true">
         <set>
             <objectAnimator
-                android:duration="260"
+                android:duration="160"
                 android:propertyName="scaleX"
                 android:valueTo="0.96"
                 android:valueType="floatType" />
             <objectAnimator
-                android:duration="260"
+                android:duration="160"
                 android:propertyName="scaleY"
                 android:valueTo="0.96"
                 android:valueType="floatType" />
@@ -21,12 +21,12 @@
     <item>
         <set>
             <objectAnimator
-                android:duration="260"
+                android:duration="220"
                 android:propertyName="scaleX"
                 android:valueTo="1"
                 android:valueType="floatType" />
             <objectAnimator
-                android:duration="260"
+                android:duration="220"
                 android:propertyName="scaleY"
                 android:valueTo="1"
                 android:valueType="floatType" />

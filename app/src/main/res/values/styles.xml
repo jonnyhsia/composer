@@ -1,8 +1,8 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#1F1F1F</item>
+        <item name="colorPrimaryDark">#1F1F1F</item>
         <item name="colorAccent">#222222</item>
         <item name="android:statusBarColor">@android:color/white</item>
         <item name="windowNoTitle">true</item>
@@ -14,10 +14,29 @@
         <item name="labelTheme">@style/LabelViewTheme</item>
     </style>
 
-    <style name="AppTheme.Translucent">
+    <style name="AppTheme.Immersive">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <!--<item name="android:windowLightStatusBar">true</item>-->
+    </style>
+
+    <style name="AppTheme.Translucent">
+        <item name="android:windowBackground">@color/black54</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent.FullScreen">
+        <item name="android:windowBackground">@color/black54</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
@@ -152,6 +171,18 @@
     <style name="Text.Inbox.Secondary">
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="TextTabBookmark" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="TextTabFollowingTopic" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/noto_sans_medium</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/textPrimary</item>
     </style>
 
 </resources>

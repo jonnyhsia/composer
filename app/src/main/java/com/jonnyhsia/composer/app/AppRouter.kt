@@ -4,6 +4,7 @@ import android.support.v4.util.ArrayMap
 import com.jonnyhsia.composer.page.about.AboutActivity
 import com.jonnyhsia.composer.page.compose.ComposeActivity
 import com.jonnyhsia.composer.page.credit.CreditActivity
+import com.jonnyhsia.composer.page.egg.EggActivity
 import com.jonnyhsia.composer.page.main.MainActivity
 import com.jonnyhsia.router.Mapping
 
@@ -14,6 +15,7 @@ object AppRouter {
         put("Compose", Mapping(target = ComposeActivity::class.java, paramKeys = listOf(ComposeActivity.ARCHIVE_ID, ComposeActivity.ARCHIVE_TITLE, ComposeActivity.ARCHIVE_CONTENT)))
         put("About", Mapping(target = AboutActivity::class.java))
         put("Credit", Mapping(target = CreditActivity::class.java))
+        put("Egg", Mapping(target = EggActivity::class.java))
     }
 
     val defaultMapping = "NotFound" to Mapping(schema = "native", target = MainActivity::class.java)
